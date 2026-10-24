@@ -26,6 +26,15 @@ class TablaHash {
     // COMPLETAR: la representacion la eligen ustedes (que guardan, y que hay
     // en cada bucket). Pueden agregar tambien funciones auxiliares privadas.
     // Lo que el Iterador necesite de aca tiene que estar declarado antes que el.
+    struct par{
+        K clave;
+        v valor;
+
+    };
+    size_t cantidades;
+    std::vector<std::vector<persona_goles>> buckets;
+        
+
 
   public:
     static const size_t FACTOR_DE_CARGA_MAXIMO = 2;
@@ -77,6 +86,7 @@ class TablaHash {
     // exactamente una vez, en algun orden (ver TAD Iterador en el enunciado).
     // Deja de ser valido si se inserta o se elimina en la tabla.
     //
+
     // Invariante de representacion:
     //   COMPLETAR: escriban aca el invariante de la representacion que elijan.
     class Iterador {
@@ -134,6 +144,8 @@ class TablaHash {
 
 template <typename K, typename V>
 TablaHash<K, V>::TablaHash(size_t capacidad_inicial) {
+    cantidades(0);
+    buckets(capacidad_inicial);
     // COMPLETAR
 }
 
