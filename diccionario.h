@@ -98,7 +98,7 @@ class Diccionario {
         //        O(n + c).
         void avanzar() {
             // COMPLETAR
-            de_la_tabla.avanzar()
+            de_la_tabla.avanzar();
         }
     };
 
@@ -120,7 +120,7 @@ void Diccionario<K, V>::insertar(const K& clave, const V& valor) {
     // COMPLETAR
     V* puntero = tabla.buscar(clave);
     if (puntero == nullptr) {tabla.insertar(clave, valor);}
-    else {*p = valor;}
+    else {*puntero = valor;}
 }
 
 template <typename K, typename V>
