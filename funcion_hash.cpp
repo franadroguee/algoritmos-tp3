@@ -1,11 +1,7 @@
 #include "funcion_hash.h"
 //funcion mala
 size_t hash_largo_nombre(const std::string& clave){
-    size_t contador = 0;
-    for(char c : clave){
-        contador ++;
-    }
-    return contador;
+    return clave.size();
 }
 //funcion media
 size_t hash_suma(const std::string& clave){

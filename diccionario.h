@@ -132,7 +132,7 @@ bool Diccionario<K, V>::pertenece(const K& clave) {
 template <typename K, typename V>
 V Diccionario<K, V>::obtener(const K& clave) {
     // COMPLETAR
-    return tabla.buscar(clave);
+    return *tabla.buscar(clave);
 }
 
 template <typename K, typename V>
@@ -144,7 +144,7 @@ void Diccionario<K, V>::eliminar(const K& clave) {
 template <typename K, typename V>
 size_t Diccionario<K, V>::cantidad() {
     // COMPLETAR
-    return tabla.cantidad;
+    return tabla.cantidad();
 }
 
 // El "typename" le avisa al compilador que Diccionario<K, V>::Iterador es un
